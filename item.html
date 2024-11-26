@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container top-nav">
+            <a href="#"> <img class="logo" src="image e-commrce/logo-black.png" alt=""></a>
+            <form action="" class="search">
+                <input type="search" placeholder="search for products">
+                <button type="submit">search</button>
+            </form>
+            <div class="cart-header">
+                <div onclick="open_cart()" class="icon-cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="count-item">0</span>
+                </div><!--icon-cart-->
+
+                <div class="total-price ">
+                    <p> my cart:</p>
+                    <p class="price_cart-head">$0</p>
+                </div><!--total-price-->
+            </div><!--cart-header-->
+
+        </div><!--container yop-nav-->
+        <nav>
+            <div class="links">
+                <i onclick="open_menu()" class="fa-solid fa-bars menu-links"></i>
+                <ul id="menu">
+                    <span onclick="close_menu()" class="bg-overlay"></span>
+                    <i onclick="close_menu()" class="fa-regular fa-circle-xmark btn_close_menu"></i>
+                    <img class="logo-menu" src="image e-commrce/logo-black.png" alt="">
+                    <li class="active"><a href="#">home</a></li>
+                    <li><a href="#">all products</a></li>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+                <div class="loging-signup">
+                    <a href="#">log in <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="#">sign up <i class="fa-solid fa-user-plus"></i></a>
+    
+                </div>
+            </div><!--links container-->
+        </nav>
+        
+    </header>
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>My Cart <span>( <span class="count_item_cart" style="color: rgb(137, 11, 11);font-weight: bold;font-size: 18px;">  0 </span> Item In Cart)</span> </h3>
+            <span  calss="close-cart"><i onclick="close_cart()" class="fa-regular fa-circle-xmark"></i></span>
+        </div><!--top_cart-->
+        <div class="items-in-cart">
+          
+        </div><!--items-in-cart-->
+
+        <div class="bottom-cart">
+            <div class="tatol">
+                <p>Cart Sub Total</p>
+                <p class="price-cart-total">$0</p>
+            </div><!--total-->
+
+            <div class="button-cart">
+                <a href="#" class="btn-cart">proceed to check out</a>
+                <button class="btn-cart tran-bg">Shop more</button>
+            </div>
+        </div><!--bottom-cart-->
+    </div><!--cart-->  
+    <div class="item-detail">
+        <div class="container">
+            <div class="img-item">
+                <div class="big-img">
+                    <img id="bigimg" src="image e-commrce/product/product-1.jpg" alt="">
+                </div>
+                <div class="sm-img">
+                    <img onclick="changeitemimg(this.src)" src="image e-commrce/product/product-1.jpg" alt="">
+                    <img onclick="changeitemimg(this.src)" src="image e-commrce/product/product1.jpg" alt="">
+                    <img onclick="changeitemimg(this.src)" src="image e-commrce/product/product-2.jpg" alt="">
+                    <img onclick="changeitemimg(this.src)" src="image e-commrce/product/product2.jpg" alt="">
+                </div>
+
+            </div><!--img-item-->
+
+            <div class="details-item">
+                <h1 class="name"> orignal moblie android dual SIM smart phone G3 </h1>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div><!--stars-->
+
+                <div class="price">
+                    <p> <span>$200.00</span> </p>
+                    <p class="old-price"> $300.00</p>
+                </div><!--price-->
+
+                <h5> Avaailability: <span> In Stock</span></h5>
+                <h5>SKU: <span>samsuang c4677: plus </span></h5>
+                <p class="text-p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ducimus animi,
+                     beatae porro dolorum voluptatibus quasi.Quaerat dolorem repellendus corrupti,
+                      officiis sapiente quae impedit recusandae commodi quos, reprehenderit nemo minus?
+                </p>
+                <h4>Hurry Up! only 98 products left in stock </h4>
+                <button> ADD To Cart <i class="fa-solid fa-cart-plus"></i></button>
+
+                <div class="icons">
+                    <span><i class="fa-regular fa-heart"></i></span>
+                    <span><i class="fa-solid fa-sliders"></i></span>
+                    <span><i class="fa-solid fa-print"></i></span>
+                    <span><i class="fa-solid fa-share-nodes"></i></span>
+
+
+                </div><!--icons-->
+
+
+            </div><!--details-item-->
+        </div><!--container-->
+    </div><!--item-details-->
+    
+   
+
+
+    <section class="slide slide-sale">
+        <div class="container">
+            <div class="sale-sec mySwiper">
+                <div class="top-slide">
+                    <h2>on sale <span>product</span></h2>
+                </div><!--top-slide-->
+                <div id="items_sale" class="products swiper-wrapper">
+
+                </div><!--products-->
+                <div class="swiper-button-next btn_swip"></div>
+                <div class="swiper-button-prev btn_swip"></div>
+            </div><!--sale-sec-->
+        </div><!--container-->
+    </section><!--slide-->
+
+
+    
+
+    <div class="back_to_top">
+        <p>back to top</p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="big_row">
+                <img src="image e-commrce/logo-white.png" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>hotline free 24/24</h5>
+                        <h6>+100 -111-794949</h6>
+                    </div>
+                </div>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Ab, qui. Magnam, 
+                </p>
+
+            </div><!--big-row-->
+
+          
+
+            <div class="row">
+                <h2 >FAQs & Help</h2>
+
+                <div class="links">
+                    <a href="#">F.A.Qs</a>
+                    <a href="#">ordering tracking</a>
+                    <a href="#">contacts</a>
+                    <a href="#">events</a>
+                    <a href="#">help center</a>
+                </div><!--links-->
+            </div>
+
+            <div class="row">
+                <h2 >shipping & delivery </h2>
+
+                <div class="links">
+                    <a href="#">delivery information</a>
+                    <a href="#"> discount </a>
+                    <a href="#">payment & shipping</a>
+                    <a href="#">estimated delivery time </a>
+                    <a href="#">shipping guids </a>
+                </div><!--links-->
+            </div>
+
+            <div class="row">
+                <h2 >information</h2>
+
+                <div class="links">
+                    <a href="#">popular</a>
+                    <a href="#">our services</a>
+                    <a href="#">your account</a>
+                    <a href="#">privacy policy</a>
+                    <a href="#">terms & conidition </a>
+                </div><!--links-->
+            </div>
+        </div><!--container-->
+        <div class="footer_bottom">
+            <div class="container">
+                <p>Copyright &copy; <span>Topic.</span> all rights reserved</p>
+
+                <div class="pay_img">
+                    <img src="image e-commrce/payment-1.png" alt="">
+                    <img src="image e-commrce/payment-2.png" alt="">
+                    <img src="image e-commrce/payment-3.png" alt="">
+                    <img src="image e-commrce/payment-4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    
+
+
+    
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/swiper.js"></script>
+      <script src="js/items_home.js"></script>
+
+</body>
+</html>
